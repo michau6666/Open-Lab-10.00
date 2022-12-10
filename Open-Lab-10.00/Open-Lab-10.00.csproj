@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB19A535-2483-4942-9AD5-1A7D4B49B32E}</ProjectGuid>
+    <ProjectGuid>{8CE21401-F626-4670-BF36-8BAF8B97D307}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Open_Lab_10._00</RootNamespace>
     <AssemblyName>Open-Lab-10.00</AssemblyName>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
