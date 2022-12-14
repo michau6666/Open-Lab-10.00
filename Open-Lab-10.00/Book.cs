@@ -9,64 +9,55 @@ namespace Open_Lab_10._00
     internal class Book
 
     {
-        private string title;
-        private int pages;
-        private string category;
-        private string author;
-        private int releaseDate;
+        public string title;
+        public int pages;
+        public string category;
+        public string author;
+        public int releaseDate;
 
-        public string GetTitle()
+        public string Title
         {
-            return this.title;
+            get { return title; }
+            set { title = value; }
         }
-        public string SetTitle(string title)
+        public int Pages
         {
-            this.title = title;
-            return title;
+            get { return pages; }
+            set
+            {
+                pages = value;
+                if (pages < 0)
+                {
+                    pages = 1;
+                }
+            }
         }
-        public int GetPages()
+
+        public string Category
         {
-            return this.pages;
+            get { return category; }
+            set { category = value; }
         }
-        public int SetPages(int pages)
+        public string Author
         {
-            this.pages = pages;
-            return pages;
+            get { return author; }
+            set { author = value; }
         }
-        public string GetCategory()
+        public int ReleaseDate
         {
-            return this.category;
+            get { return releaseDate; }
+            set
+            {
+                releaseDate = value;
+                if (releaseDate < 1450 | releaseDate > 2021)
+                {
+                    releaseDate = -1;
+                }
+            }
         }
-        public string SetCategory(string category)
+        public override string ToString()
         {
-            this.category = category;
-            return category;
-        }
-        public string GetAuthor()
-        {
-            return this.author;
-        }
-        public string SetAuthor(string author)
-        {
-            this.author = author;
-            return author;
-        }
-        public int GetReleaseDate()
-        {
-            return this.releaseDate;
-        }
-        public int SetReleaseDate(int releaseDate)
-        {
-            this.releaseDate = releaseDate;
-            return releaseDate;
-        }
-        public void Vypis()
-        {
-            Console.WriteLine(title);
-            Console.WriteLine(pages);
-            Console.WriteLine(category);
-            Console.WriteLine(author);
-            Console.WriteLine(releaseDate);
+            return ($"{title}\n{pages}\n{category}\n{author}\n{releaseDate}");
         }
     }
 }
