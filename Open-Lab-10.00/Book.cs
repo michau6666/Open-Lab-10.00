@@ -15,6 +15,30 @@ namespace Open_Lab_10._00
         public string author;
         public int releaseDate;
 
+        public Book()
+        {
+            this.title = "-1";
+            this.pages = -1;
+            this.category = "-1";
+            this.author = "-1";
+            this.releaseDate = -1;
+        }
+        public Book(string title, int pages)
+        {
+            this.title = title;
+            this.pages = pages;
+            this.category = "-1";
+            this.author = "-1";
+            this.releaseDate = -1;
+        }
+        public Book(string title, int pages, string category, string author, int releaseDate)
+        {
+            this.title = title;
+            this.pages = pages;
+            this.category = category;
+            this.author = author;
+            this.releaseDate = releaseDate;
+        }
         public string Title
         {
             get { return title; }
@@ -55,9 +79,10 @@ namespace Open_Lab_10._00
                 }
             }
         }
+
         public override string ToString()
         {
-            return ($"{title}\n{pages}\n{category}\n{author}\n{releaseDate}");
+            return string.Format($"\n{title}\n{pages}\n{category}\n{author}\n{releaseDate}\n");
         }
     }
 }
