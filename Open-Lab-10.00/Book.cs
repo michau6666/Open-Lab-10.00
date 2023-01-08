@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,7 +60,6 @@ namespace Open_Lab_10._00
 
         public string Category
         {
-            get { return category; }
             set { category = value; }
         }
         public string Author
@@ -73,16 +73,22 @@ namespace Open_Lab_10._00
             set
             {
                 releaseDate = value;
-                if (releaseDate < 1450 | releaseDate > 2021)
+                if (releaseDate <= 1450 | releaseDate >= 2021)
                 {
                     releaseDate = -1;
                 }
             }
         }
 
+        
+
         public override string ToString()
         {
             return string.Format($"\n{title}\n{pages}\n{category}\n{author}\n{releaseDate}\n");
         }
+
+        public static readonly List<string> categoryList = new List<string>()
+        {"detské", "romantické", "náučné", "sci-fi", "dobrodružné"};
+        
     }
 }

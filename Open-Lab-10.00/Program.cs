@@ -23,6 +23,7 @@ namespace Open_Lab_10._00
             Book LOTR2 = new Book();
             Book LOTR3 = new Book("Lord Of The Rings 3", 50);
             Book Hobit = new Book("Hobit", 300, "fantasy", "John Ronald Tolkien", 1937);
+            Hobit.category = Book.categoryList[4];
             Console.WriteLine(LOTR2.ToString());
             Console.WriteLine(LOTR3.ToString());
             Console.WriteLine(Hobit.ToString());
